@@ -1,0 +1,30 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.7.34031.279
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "sdcb-openvino-yolov8-det", "sdcb-openvino-yolov8-det\sdcb-openvino-yolov8-det.csproj", "{8729866B-BCDB-47B9-B0CC-CF402E7E11EE}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "解决方案项", "解决方案项", "{5D6966D9-A2E8-4577-B752-3018DD57D1CC}"
+	ProjectSection(SolutionItems) = preProject
+		readme.md = readme.md
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8729866B-BCDB-47B9-B0CC-CF402E7E11EE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8729866B-BCDB-47B9-B0CC-CF402E7E11EE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8729866B-BCDB-47B9-B0CC-CF402E7E11EE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8729866B-BCDB-47B9-B0CC-CF402E7E11EE}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {2502CA59-41AA-4F62-8DD4-FB6925C208F0}
+	EndGlobalSection
+EndGlobal
