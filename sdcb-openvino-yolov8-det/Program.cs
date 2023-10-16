@@ -14,7 +14,7 @@ public class Program
         string[] dicts = XDocument.Load(modelFile)
             .XPathSelectElement(@"/net/rt_info/model_info/labels")!.Attribute("value")!.Value
             .Split(' ');
-        using VideoCapture vc = new(1);
+        using VideoCapture vc = new(0);
 
         using Model rawModel = OVCore.Shared.ReadModel(modelFile);
         using PrePostProcessor pp = rawModel.CreatePrePostProcessor();
