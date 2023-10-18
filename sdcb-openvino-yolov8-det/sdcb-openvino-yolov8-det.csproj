@@ -18,7 +18,7 @@
   <ItemGroup>
     <PackageReference Include="OpenCvSharp4" Version="4.8.0.20230708" />
     <PackageReference Include="OpenCvSharp4.runtime.win" Version="4.8.0.20230708" />
-    <PackageReference Include="Sdcb.OpenVINO" Version="0.4.0" />
+    <PackageReference Include="Sdcb.OpenVINO" Version="0.4.3" />
     <PackageReference Include="Sdcb.OpenVINO.runtime.win-x64" Version="2023.1.0" />
   </ItemGroup>
 

@@ -37,10 +37,7 @@ public class Program
             using Mat f32 = new();
             resized.ConvertTo(f32, MatType.CV_32FC3, 1.0 / 255);
 
-            using (Tensor input = Tensor.FromRaw(
-                new ReadOnlySpan<byte>((void*)f32.Data, (int)((nint)f32.DataEnd - f32.DataStart)),
-                new Shape(1, f32.Rows, f32.Cols, 3),
-                ov_element_type_e.F32))
+            using (Tensor input = Tensor.FromMat(f32))
             {
                 ir.Inputs.Primary = input;
             }
@@ -92,8 +89,8 @@ public record DetectionResult(int ClassId, string Class, Rect Rect, float Confid
         if (dicts.Length != clsRowCount - 4) throw new ArgumentException($"dicts length {dicts.Length} does not match shape cls row count{clsRowCount}.");
         for (int i = 0; i < objectCount; i++)
         {
-            ReadOnlySpan<float> rectData = t[(i * clsRowCount)..(i * clsRowCount + 4)];
-            ReadOnlySpan<float> confidenceInfo = t[(i * clsRowCount + 4)..(i * clsRowCount + clsRowCount)];
+            ReadOnlySpan<float> rectData = t.AsSpan()[(i * clsRowCount)..(i * clsRowCount + 4)];
+            ReadOnlySpan<float> confidenceInfo = t.AsSpan()[(i * clsRowCount + 4)..(i * clsRowCount + clsRowCount)];
             int maxConfidenceClsId = IndexOfMax(confidenceInfo);
             float confidence = confidenceInfo[maxConfidenceClsId];
 
