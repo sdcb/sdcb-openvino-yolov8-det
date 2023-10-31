@@ -1,6 +1,6 @@
 ﻿using OpenCvSharp.Dnn;
 using OpenCvSharp;
-using Sdcb.OpenVINO.Natives;
+using Sdcb.OpenVINO.Extensions.OpenCvSharp4;
 using Sdcb.OpenVINO;
 using System.Diagnostics;
 using System.Xml.Linq;
@@ -37,7 +37,7 @@ public class Program
             using Mat f32 = new();
             resized.ConvertTo(f32, MatType.CV_32FC3, 1.0 / 255);
 
-            using (Tensor input = Tensor.FromMat(f32))
+            using (Tensor input = f32.AsTensor())
             {
                 ir.Inputs.Primary = input;
             }
