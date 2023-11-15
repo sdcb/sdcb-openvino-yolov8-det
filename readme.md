@@ -5,6 +5,7 @@ This project is a minimal demo for my [OpenVINO.NET](https://github.com/sdcb/Ope
 ## NuGet packages requirements
 * Sdcb.OpenVINO
 * Sdcb.OpenVINO.runtime.win-x64
+* Sdcb.OpenVINO.Extensions.OpenCvSharp4
 * OpenCvSharp4
 * OpenCvSharp4.runtime.win
 
